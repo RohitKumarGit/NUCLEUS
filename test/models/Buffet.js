@@ -3,7 +3,10 @@ const buffetSchema=new mongoose.Schema({
   user_id:Number,
   restaurant_id:Number,
   available_slots:Array[{
-    slot_time:Array,
+    slot_time:{
+      starting:String,
+      ending:String
+    },
     total_slots:Number,
     available_slots:Number
   }]
